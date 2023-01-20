@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+body{
+   height: 100vh;
+   display: flex;
+   background-color: rgb(87, 189, 130);
+   transition: background 0.5s ease;
+   position: relative;
+}
+.field_name,.field_email,.field_password,.field_finish{
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+   height: 6%;
+   width: 50%;
+   background-color: white;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   border-radius: 9px;
+   transform: all 0.5s ease;
+}
+.field_name i,
+.field_email i,
+.field_password i,
+.field_finish i{
+   padding: 12px;
+   cursor: pointer;
+}
+.field_name input,
+.field_email input,
+.field_password input {
+   border: none;
+   background: none;
+   flex: 1;
+   height: 100%;
+   outline: none;
+}
+div.inactive{
+   opacity: 0;
+   transform: translate(-50%,20%);
+   pointer-events: none;
+   transition: opacity 0.2s;
+}
+div.active {
+   opacity: 1;
+   transform: translate(-50%, -50%);
+   pointer-events: all;
+   transition: transform 0.6s;
+}
+@keyframes shake{
+   0%{
+      transform: translate(-50% , -50%) rotate(0deg);
+   }
+   50%{
+      transform: translate(-50%, -50%) rotate( 10deg);
+   }
+   100%{
+      transform: translate(-50%, -50%) rotate(0deg);
+   }
+}
